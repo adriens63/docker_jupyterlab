@@ -1,0 +1,10 @@
+version: '2.3' #pour pouvoir utiliser 'runtime'
+services:
+  container_jupyterlab:
+    container_name: 'container_jupyterlab'
+    image: tensorflow/tensorflow:latest-gpu-jupyter
+    ports:
+      - 8889:8888
+    volumes:
+      - ~/git/coding:/tf/coding
+    runtime: nvidia
